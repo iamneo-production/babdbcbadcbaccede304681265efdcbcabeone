@@ -62,3 +62,4 @@ btns.forEach((btn, i) => {
 });
 
 document.querySelector('#reset').addEventListener('click', resetGame);
+
