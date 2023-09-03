@@ -74,12 +74,11 @@ h1 {
   color: black;
   cursor: pointer;
   padding: 5px 10px;
-                                                                                                                                                      background-color: white;
-                                                                                                                                                          transition: background-color 0.3s, color 0.3s;
-                                                                                                                                                          }
+  background-color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
 
-                                                                                                                                                          #resetBtn:hover {
-                                                                                                                                                              background-color: black;
-                                                                                                                                                                  color: white;
-                                                                                                                                                                 }
+#resetBtn:hover {
+  background-color: black;
+  color: white;
 }
