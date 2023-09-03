@@ -1,4 +1,5 @@
 // Initial game state
+/*
 let cells = ['', '', '', '', '', '', '', '', ''];
 let currentPlayer = 'X';
 let result = document.querySelector('.result');
@@ -13,8 +14,9 @@ let conditions = [
     [0, 4, 8],
     [2, 4, 6]
 ];
-
+*/
 // Function to handle player moves
+/*
 const ticTacToe = (element, index) => {
     // Your game logic here
 
@@ -34,8 +36,10 @@ const ticTacToe = (element, index) => {
 
     // Your code to handle button and cell interactions
     // ...
+    /*
 };
 
+*/
     /*
     **Part 2: Reset Function (Add your code here)**
 
@@ -46,7 +50,7 @@ const ticTacToe = (element, index) => {
     */
 
 // Function to reset the game
-const resetGame = () => {
+/*const resetGame = () => {
     // Your code to reset the game state
     // ...
 
@@ -62,7 +66,7 @@ btns.forEach((btn, i) => {
 });
 
 document.querySelector('#reset').addEventListener('click', resetGame);
-
+*/
 const cells = document.querySelectorAll('.cell');
 const result = document.getElementById('result');
 const resetButton = document.getElementById('reset-button');
@@ -108,20 +112,20 @@ function handleCellClick(cell, index) {
             result.textContent = `Player ${currentPlayer}'s Turn`;
         }
     }
-                                                                    }
+}
 
-                                                                     function handleReset() {
-                                                                         gameBoard = ['', '', '', '', '', '', '', '', ''];
-                                                                           gameWon = false;
-                                                                                currentPlayer = 'X';
-                                                                                   cells.forEach(cell => {
-                                                                                                 cell.textContent = '';
-                                                                                               });
-                                                                                                   result.textContent = `Player ${currentPlayer}'s Turn`;
-                                                                                                        }
-                                                                                                          cells.forEach((cell, index) => {
-                                                                                                        cell.addEventListener('click', () => {
-                                                                                                                 handleCellClick(cell, index);
-                                                                                                                    });
-                                             });
-                                            resetButton.addEventListener('click', handleReset);
+function handleReset() {
+    gameBoard = ['', '', '', '', '', '', '', '', ''];
+    gameWon = false;
+    currentPlayer = 'X';
+    cells.forEach(cell => {
+        cell.textContent = '';
+    });
+    result.textContent = `Player ${currentPlayer}'s Turn`;
+}
+cells.forEach((cell, index) => {
+    cell.addEventListener('click', () => {
+        handleCellClick(cell, index);
+    });
+});
+resetButton.addEventListener('click', handleReset);
